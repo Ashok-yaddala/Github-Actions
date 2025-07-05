@@ -1,12 +1,10 @@
-name: A work flow for my Hello world file
-on: push
+name: First Workflow
+on: workflow_dispatch
 jobs:
-  build:
-     name: Hello world action
-     runs-on: ubuntu-latest
-     steps:
-     - uses: actions/checkout@v4.2.2
-     - uses: ./actions-a
-       with: 
-         MY_NAME: Ashok
-     
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
